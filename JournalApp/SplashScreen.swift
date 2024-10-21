@@ -6,9 +6,11 @@ struct SplashScreen: View {
     @State private var navigateToNextScreen = false
     
     var body: some View {
+        
         NavigationView {
             if isActive {
-                EmptyState() // Navigate to EmptyState when isActive is true
+                EmptyState()
+                
             } else {
                 ZStack{
                     Image("BG")

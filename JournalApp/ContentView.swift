@@ -13,31 +13,19 @@ struct ContentView: View {
     
     
     var body: some View {
-        
-        ZStack{
-            Image("BG")
-            
+       
             VStack {
-                Image("Diary")
-                    .resizable()
-                    .frame(width: 77.0, height: 101.0)
+            
                 
                 
                 Text("Journali")
                     .font(.largeTitle)
                     .fontWeight(.black)
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color.blue)
                     .padding(.top, 15.0)
-                
-                Text("Your thoughts, your story")
-                    .font(.body)
-                    .fontWeight(.regular)
-                    .foregroundColor(Color.white)
-                    .padding(.top, -16.521)
             }
         }
     }
-}
     #Preview {
         ContentView()
     }
