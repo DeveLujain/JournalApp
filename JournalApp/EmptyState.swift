@@ -11,32 +11,79 @@ struct EmptyState: View {
     var body: some View {
         ZStack{
             Image("BG")
-            Image("Diary")
-                .resizable()
-            .frame(width: 77.0, height: 101.0)
+            VStack{
+                Image("Diary")
+                    .resizable()
+                    .frame(width: 77.0, height: 101.0)
+            }
             
             Text("Begin Your Journal")
                 .fontWeight(.bold)
                 .foregroundColor(Color(red: 0.831, green: 0.7843137254901961, blue: 1.0))
-                .padding(.top, 150.0)
+                .padding(.top, 180)
             
             Text ("Craft your personal diary, tap the plus icon to begin")
                 .foregroundColor(Color.white)
-                .padding(.top, 190.0)
+                .multilineTextAlignment(.center)
+                .padding([.top, .leading, .trailing], 240.0)
+                .padding(.top, 40.0)
             
             VStack{
-                Text("JOURNAL")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .foregroundColor(Color.white)
-                    .padding(.bottom, 620.24)
+                HStack{
+                    Text("Journal")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color.white)
+                        .padding(.bottom, 650.0)
+                        .padding(.trailing, 140.0)
+                    
+                    
+                    Button(action: {})
+                    {
+                        Circle()
+                            .fill (Color.gray .opacity(0.3))
+                            .frame(width: 35.0, height: 35.0)
+                            .padding(.bottom, 650.0)
+                            .padding(.trailing, 3.0)
+                            .overlay (
+                                Image(systemName: "plus")
+//                                    .resizable()
+                                    .foregroundColor(Color(red: 0.8313725490196079, green: 0.7843137254901961, blue: 1.0))
+                                    .padding(.bottom, 650.0)
+                                    .padding(.trailing, 3.0)
+                                    
+                            ) }
+                    
+                    Button(action: {})
+                    {
+                        Circle()
+                            .fill (Color.gray .opacity(0.3))
+                            .frame(width: 35, height: 35)
+                            .padding(.bottom, 650.0)
+                            .padding(.trailing, 3.0)
+                        
+                            .overlay (
+                                Image(systemName: "line.3.horizontal.decrease")
+                                    .foregroundColor(Color(red: 0.8313725490196079, green: 0.7843137254901961, blue: 1.0))
+                                    .padding(.bottom, 650.0)
+                                    .padding(.trailing, 3.0)
+                            )
+                        
+                        
+                        
+                        
+                        
+                        
                     }
+                }
+            }
         }
-         
-        
     }
-}
-
-#Preview {
-    EmptyState()
+    
+    struct EmptyState_Previews: PreviewProvider {
+        static var previews: some View {
+            EmptyState()
+        }
+    }
+    
 }
