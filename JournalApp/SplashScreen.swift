@@ -35,7 +35,6 @@ struct SplashScreen: View {
                         // Placeholder for splash screen image
                             .onAppear {
                                 withAnimation(.easeIn(duration: 1.2)) {
-                                    // Add any animations here if needed
                                 }
                             }
                     }
