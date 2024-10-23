@@ -21,3 +21,6 @@ struct MainPage: View {
         }
     }
 }
+#Preview {
+    MainPage()
+}

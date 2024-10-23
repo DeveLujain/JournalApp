@@ -112,8 +112,8 @@
 				8BC87C032CC4FD5000868957 /* EmptyState.swift */,
 				8BC87C052CC4FD5E00868957 /* MainPage.swift */,
 				8BC87C072CC4FD6800868957 /* MainPage2.swift */,
-				8BC87C0B2CC4FDAE00868957 /* EditJournal.swift */,
 				8BC87C0D2CC4FDC000868957 /* NewJournal.swift */,
+				8BC87C0B2CC4FDAE00868957 /* EditJournal.swift */,
 				8BC87BDD2CC4FD2F00868957 /* Assets.xcassets */,
 				8BC87BDF2CC4FD2F00868957 /* Preview Content */,
 			);
