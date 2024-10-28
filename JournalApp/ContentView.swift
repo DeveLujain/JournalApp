@@ -13,20 +13,13 @@ struct ContentView: View {
     
     
     var body: some View {
-       
-            VStack {
-            
-                
-                
-                Text("Journali")
+                Text("Journali test")
                     .font(.largeTitle)
                     .fontWeight(.black)
-                    .foregroundColor(Color.blue)
                     .padding(.top, 15.0)
             }
         }
-    }
-    #Preview {
+        #Preview {
         ContentView()
     }
 

@@ -9,7 +9,7 @@ struct SplashScreen: View {
         
         NavigationView {
             if isActive {
-                EmptyState()
+                MainPage()
                 
             } else {
                 ZStack{
