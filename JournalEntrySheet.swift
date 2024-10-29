@@ -7,7 +7,7 @@ struct JournalEntrySheet: View {
     
     let buttonColor = Color(red: 0.643, green: 0.6, blue: 1.0) // Hex color #A499FF
     
-    // Get current date as a formatted string
+    
     var currentDate: String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -18,7 +18,6 @@ struct JournalEntrySheet: View {
         NavigationView {
             VStack(alignment: .leading, spacing: 15) {
                 
-                // Title input styled like the date
                 ZStack(alignment: .leading) {
                     if journal.title.isEmpty {
                         Text("Title")
@@ -36,7 +35,7 @@ struct JournalEntrySheet: View {
                         .padding(.vertical, 10)
                 }
                 
-                // Auto-set date display
+               
                 Text(currentDate)
                     .foregroundColor(Color(hue: 1.0, saturation: 0.055, brightness: 0.639))
                     .opacity(0.8) // Similar opacity
@@ -48,22 +47,22 @@ struct JournalEntrySheet: View {
                         Text("Type your Journal...")
                             .foregroundColor(.gray)
                             .padding(.leading, 5)
-                            .padding(.top, 8) // Adjust padding to align
+                            .padding(.top, 8)
                     }
                     TextEditor(text: $journal.description)
                         .font(.body)
                         .foregroundColor(.white.opacity(0.8))
                         .padding(.vertical, 10)
                         .frame(minHeight: 100)
-                        .background(Color.clear) // Transparent background
-                        .scrollContentBackground(.hidden) // Hide default white background
+                        .background(Color.clear)
+                        .scrollContentBackground(.hidden)
                 }
                 
                 Spacer()
             }
             .padding()
             .foregroundColor(.white)
-            .background(Color.black.edgesIgnoringSafeArea(.all)) // Black background
+            .background(Color.black.edgesIgnoringSafeArea(.all)) 
             .navigationTitle("New Journal")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

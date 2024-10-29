@@ -13,10 +13,10 @@ struct MainPage: View {
     
     var filteredJournals: [Journal] {
         journals.filter { journal in
-            // Filter by bookmark if enabled
+            
             let bookmarkFilter = !showBookmarkedOnly || journal.isBookmarked
             
-            // Filter by date if enabled (e.g., show only today's journals)
+            //تعديل التاريخ
             let dateFilter = !filterByDate || Calendar.current.isDateInToday(journal.date)
             
             return bookmarkFilter && dateFilter
@@ -62,9 +62,8 @@ struct MainPage: View {
                             )
                     }
                     
-                    // Plus button
                     Button(action: {
-                        editingJournal = nil // Clear any existing editing journal
+                        editingJournal = nil
                         showingSheet = true
                     }) {
                         Circle()
@@ -80,7 +79,7 @@ struct MainPage: View {
                             journal: editingJournal ?? Journal(title: "", date: Date(), description: ""),
                             onSave: { journal in
                                 if let index = journals.firstIndex(where: { $0.id == journal.id }) {
-                                    journals[index] = journal // Update existing journal
+                                    journals[index] = journal /
                                 } else {
                                     journals.append(journal) // Add new journal
                                 }
@@ -90,6 +89,8 @@ struct MainPage: View {
                 }
                 .padding(.horizontal)
                 .padding(.top, 20)
+                
+                
                 
                 // Search bar
                 HStack {
@@ -105,7 +106,7 @@ struct MainPage: View {
                 .cornerRadius(12)
                 .padding([.leading, .bottom, .trailing], 14.0)
                 
-                // List of journal entries with swipe actions
+                // swipe actions
                 List {
                     ForEach(filteredJournals.indices, id: \.self) { index in
                         JournalCell(

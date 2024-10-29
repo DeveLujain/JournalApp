@@ -57,7 +57,7 @@ struct EmptyState: View {
                     }
                     
                     Button(action: {
-                        showingSheet = true // Step 2: Set showingSheet to true
+                        showingSheet = true
                     }) {
                         Circle()
                             .fill(Color.gray.opacity(0.3))
@@ -71,10 +71,7 @@ struct EmptyState: View {
                                     .padding(.trailing, 3.0)
                             )
                     }
-//                    .sheet(isPresented: $showingSheet) { // Step 3: Present the sheet
-//                        JournalEntrySheet() // Link to JournalEntrySheet
-//                    }
-                }
+                                    }
             }
         }
     }
