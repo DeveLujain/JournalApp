@@ -32,7 +32,7 @@ struct SplashScreen: View {
                             .fontWeight(.regular)
                             .foregroundColor(Color.white)
                             .padding(.top, -16.521)
-                        // Placeholder for splash screen image
+
                             .onAppear {
                                 withAnimation(.easeIn(duration: 1.2)) {
                                 }
@@ -40,7 +40,8 @@ struct SplashScreen: View {
                     }
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 6.0) {
-                            self.isActive = true // Set isActive to true after 2 seconds
+                            self.isActive = true
+                            
                         }
                     }
                 }
