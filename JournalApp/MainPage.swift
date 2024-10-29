@@ -79,9 +79,9 @@ struct MainPage: View {
                             journal: editingJournal ?? Journal(title: "", date: Date(), description: ""),
                             onSave: { journal in
                                 if let index = journals.firstIndex(where: { $0.id == journal.id }) {
-                                    journals[index] = journal /
+                                    journals[index] = journal
                                 } else {
-                                    journals.append(journal) // Add new journal
+                                    journals.append(journal)
                                 }
                             }
                         )
@@ -89,8 +89,6 @@ struct MainPage: View {
                 }
                 .padding(.horizontal)
                 .padding(.top, 20)
-                
-                
                 
                 // Search bar
                 HStack {
