@@ -11,8 +11,7 @@
 ![image](https://github.com/user-attachments/assets/d66aea23-e453-4889-895d-878826b48a06)
 
 - Tools :
-SwiftUI
-Swift
+SwiftUI, Swift
 
 - Contact Info:
 LujainAshahri@gmail.com
