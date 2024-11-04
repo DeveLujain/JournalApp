@@ -1,4 +1,4 @@
-- Project Purpose: A person digital diary.
+- Project Purpose: A personal digital diary.
 
 - it's useful app that the user can easily write, organize, and reflect on their thoughts, experiences, and feelings in a private an secure space.
 
