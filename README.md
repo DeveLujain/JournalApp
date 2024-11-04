@@ -12,5 +12,5 @@
 SwiftUI
 Swift
 
-Contact Info:
+- Contact Info:
 LujainAshahri@gmail.com
